@@ -1,0 +1,107 @@
+:root {
+    --primary-color: #121111;
+    --gradient-start: #DA4453;
+    --gradient-end: #89216B;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    margin: 0;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: white;
+    text-align: center;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+}
+
+.wrapper {
+    display: flex;
+    width: min(65vmin, 600px);
+    height: min(70vmin, 650px);
+    flex-direction: column;
+    color: aliceblue;
+    border-radius: clamp(0.5rem, 2vw, 1rem);
+    overflow: hidden;
+}
+
+.game-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+.play-btn {
+    height: clamp(30px, 5vh, 40px);
+    width: clamp(200px, 40vw, 300px);
+    border: 1px solid var(--primary-color);
+    position: absolute;
+    bottom: clamp(30px, 6vh, 70px);
+    left: 50%;
+    bottom:10px;
+    transform: translateX(-50%);
+    background-color: #00223E;
+    color: white;
+    cursor: pointer;
+    border-radius: clamp(5px, 1vw, 10px);
+    border-color: rgb(29, 28, 28);
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.play-board {
+    width: 100%;
+    height: 90%;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    background: linear-gradient(to right, var(--gradient-start));
+    border-radius: clamp(5px, 1vw, 6px);
+    border: clamp(10px, 3vw, 20px) solid var(--primary-color);
+    box-sizing: border-box;
+}
+
+.play-board .food {
+    background-color: rgb(255, 255, 255);
+    border-radius: clamp(8px, 1.5vw, 15px);
+    transition: all 0.2s ease;
+}
+
+.play-board .snake-head,
+.play-board .snake-body {
+    background-color: var(--primary-color);
+    transition: all 0.1s linear;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 70vmin;
+        height: 75vmin;
+    }
+    
+    .play-btn {
+        width: 60vw;
+        
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .game-details {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .play-board {
+        border-width: 10px;
+    }
+}
