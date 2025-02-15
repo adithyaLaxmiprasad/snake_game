@@ -4,7 +4,7 @@ A simple Snake Game built using HTML, CSS, and JavaScript. The game features smo
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🚀 Live Demo
-Click here to play the game " "
+Click here to play the game "https://snakegmamebyadithyal.netlify.app/"
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 🎮 How to Play
